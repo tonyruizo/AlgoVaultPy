@@ -9,10 +9,14 @@ TDD workflow: Red → Green → Refactor.
 - *Code inside src/algo_vault/..*
 - *Tests inside tests/..*
 
+<br>
+
 ## Prerequisites
 - Python 3.13+
 - pip (latest recommended: python -m pip install --upgrade pip)
 - (Optional but recommended) a virtual environment
+
+<br>
 
 ### Quick Start (local)
 
