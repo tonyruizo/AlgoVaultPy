@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "algo-vault"
+version = "0.1.0"
+description = "Python coding challenges with tests (pytest)"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    {email = "tonyruizo@pm.me"},
+    {name = "Tony Ruiz"}
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-cov",
+    "ruff",
+    "mypy"
+]
+
+[project.urls]
+repository = "https://github.com/tonyruizo/AlgoVaultPy"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+python_version = "3.13"
+strict = false
