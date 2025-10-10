@@ -2,7 +2,7 @@
 
 A collection of my algorithm challenges (LeetCode, Codewars, etc.), each backed by **pytest** unit tests.
 
-![tests](https://github.com/tonyruizo/AlgoVaultPy/actions/workflows/python.yml/badge.svg)
+![tests](https://github.com/tonyruizo/AlgoVaultPy/actions/workflows/test.yml/badge.svg)
 ![type-check](https://github.com/tonyruizo/AlgoVaultPy/actions/workflows/type-check.yml/badge.svg)
 
 
