@@ -7,22 +7,23 @@ name = "algo-vault"
 version = "0.1.0"
 description = "Python coding challenges with tests (pytest)"
 readme = "README.md"
-requires-python = ">=3.13"
-authors = [
-    {email = "tonyruizo@pm.me"},
-    {name = "Tony Ruiz"}
-]
+requires-python = ">=3.10"
+authors = [{ name = "Tony Ruiz", email = "tonyruizo@pm.me" }]
 
 [project.optional-dependencies]
 dev = [
-    "pytest>=8",
-    "pytest-cov",
-    "ruff",
-    "mypy"
+  "pytest>=8",
+  "pytest-cov",
+  "ruff",
+  "mypy"
 ]
 
 [project.urls]
-repository = "https://github.com/tonyruizo/AlgoVaultPy"
+Repository = "https://github.com/tonyruizo/AlgoVaultPy"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/algo_vault"]
+include = ["src/algo_vault/py.typed"]
 
 [tool.pytest.ini_options]
 addopts = "-ra -q"
@@ -32,5 +33,7 @@ testpaths = ["tests"]
 line-length = 100
 
 [tool.mypy]
-python_version = "3.13"
+python_version = "3.10"
+files = ["src", "tests"]
+mypy_path = "src"
 strict = true
