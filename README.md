@@ -2,8 +2,6 @@
 
 A collection of my algorithm challenges (LeetCode, Codewars, etc.), each backed by **pytest** unit tests.
 
-TDD workflow: Red → Green → Refactor.
-
 ![tests](https://github.com/tonyruizo/AlgoVaultPy/actions/workflows/python.yml/badge.svg)
 ![type-check](https://github.com/tonyruizo/AlgoVaultPy/actions/workflows/type-check.yml/badge.svg)
 
@@ -35,9 +33,16 @@ $ source .venv/bin/activate # windows: .venv\Scripts\Activate
 
 # Install dependencies from pyproject.toml
 $ pip install -e ".[dev]"   # Windows: pip install -e '.[dev]'
+```
+### Testing
 
+```Bash
 # Run all tests
 $ pytest 
 
-# Run test on a specific file (replace test_file_name.py)         
-$ pytest tests/test_leetcode/test_file_name.py 
+# Run test on a specific file (directory example: leetcode)          
+$ pytest tests/test_leetcode/test_file_name.py  # replace file name
+
+# Run a test on a specific function within a file (directory example: leetcode)
+$ pytest tests/test_leetcode/test_file_name.py -k "function_name" # replace file name and function name
+```
