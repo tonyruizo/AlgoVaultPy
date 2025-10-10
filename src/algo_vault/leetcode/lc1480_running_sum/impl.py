@@ -1,15 +1,4 @@
-"""
-
-1480:
-Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
-Return the running sum of nums.
-
-Example:
-Input: nums = [1,2,3,4]
-Output: [1, 3, 6, 10]
-Explanation: Running sum is obtained as follows: [1, 1 + 2, 1 + 2 + 3, 1 + 2 + 3 + 4].
-
-"""
+from typing import Callable
 
 
 def running_sum(nums: list[int]) -> list[int]:
@@ -29,3 +18,15 @@ def running_sum(nums: list[int]) -> list[int]:
         result.append(total)
 
     return result
+
+
+def running_sum_comprehension(nums: list[int]) -> list[int]:
+    total = 0
+    return [total := total + i for i in nums]
+
+
+"""
+Implement Alternative Approach Function (for test):
+"""
+
+IMPLEMENTATIONS: list[Callable[[list[int]], list[int]]] = [running_sum, running_sum_comprehension]

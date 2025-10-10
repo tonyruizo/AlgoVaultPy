@@ -25,7 +25,7 @@ git clone https://github.com/tonyruizo/AlgoVaultPy.git
 
 $ cd AlgoVaultPy
 
-# Create a virtual environment before installing depedencies (recommended)
+# Create a virtual environment before installing dependencies (recommended)
 $ python3 -m venv .venv     # Windows: python -m venv .venv     
 
 # Activate the virtual environment:
@@ -41,8 +41,8 @@ $ pip install -e ".[dev]"   # Windows: pip install -e '.[dev]'
 $ pytest 
 
 # Run test on a specific file (directory example: leetcode)          
-$ pytest tests/test_leetcode/test_file_name.py  # replace file name
+$ pytest tests/test_leetcode/test_file_name.py  # replace file_name
 
 # Run a test on a specific function within a file (directory example: leetcode)
-$ pytest tests/test_leetcode/test_file_name.py -k "function_name" # replace file name and function name
+$ pytest tests/test_leetcode/test_file_name.py -k "function_name" # replace file_name and function_name
 ```
