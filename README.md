@@ -5,6 +5,8 @@ A collection of my algorithm challenges (LeetCode, Codewars, etc.), each backed 
 TDD workflow: Red → Green → Refactor.
 
 ![tests](https://github.com/tonyruizo/AlgoVaultPy/actions/workflows/python.yml/badge.svg)
+![type-check](https://github.com/tonyruizo/AlgoVaultPy/actions/workflows/type-check.yml/badge.svg)
+
 
 - *Challenges are inside src/algo_vault/..*
 - *Tests are inside tests/..*
@@ -12,32 +14,30 @@ TDD workflow: Red → Green → Refactor.
 <br>
 
 ## Prerequisites
-- Python 3.13+
+- Python 3.10+
 - pip (latest recommended: python -m pip install --upgrade pip)
-- (Optional but recommended) a virtual environment
+
 
 <br>
 
-### Quick Start (local)
+## Quick Start 
 
 ```bash
 git clone https://github.com/tonyruizo/AlgoVaultPy.git
 
-cd AlgoVaultPy
+$ cd AlgoVaultPy
 
-# create & activate a venv
-python3 -m venv .venv
+# Create a virtual environment before installing depedencies (recommended)
+$ python3 -m venv .venv     # Windows: python -m venv .venv     
 
-# mac/linux:
-source .venv/bin/activate
-# windows (PowerShell):
-.venv\Scripts\Activate.ps1
+# Activate the virtual environment:
+$ source .venv/bin/activate # windows: .venv\Scripts\Activate
 
-# Install project + dev tools from pyproject.toml
-pip install -e ".[dev]"    # Windows PowerShell: pip install -e '.[dev]'
+# Install dependencies from pyproject.toml
+$ pip install -e ".[dev]"   # Windows: pip install -e '.[dev]'
 
 # Run all tests
-pytest 
+$ pytest 
 
 # Run test on a specific file (replace test_file_name.py)         
-pytest tests/test_leetcode/test_file_name.py 
+$ pytest tests/test_leetcode/test_file_name.py 
