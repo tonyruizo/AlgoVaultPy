@@ -13,7 +13,9 @@ A collection of my algorithm challenges (LeetCode, Codewars, etc.), each backed 
 
 ## Prerequisites
 - Python 3.10+
-- pip (latest recommended: python -m pip install --upgrade pip)
+- **uv** (fast Python package manager, written in Rust.)
+  - Install via `curl -LsSf https://astral.sh/uv/install.sh | sh` or `pip install uv`.
+  - See the installing uv guide <a href="https://docs.astral.sh/uv/getting-started/installation/" target="_target">docs</a>.
 
 
 <br>
@@ -25,24 +27,18 @@ git clone https://github.com/tonyruizo/AlgoVaultPy.git
 
 $ cd AlgoVaultPy
 
-# Create a virtual environment before installing dependencies (recommended)
-$ python3 -m venv .venv     # Windows: python -m venv .venv     
-
-# Activate the virtual environment:
-$ source .venv/bin/activate # windows: .venv\Scripts\Activate
-
-# Install dependencies from pyproject.toml
-$ pip install -e ".[dev]"   # Windows: pip install -e '.[dev]'
+# Install dependencies from pyproject.toml (creates/uses .venv automatically)
+$ uv sync
 ```
 ### Testing
 
 ```Bash
 # Run all tests
-$ pytest 
+$ uv run pytest
 
-# Run test on a specific file (directory example: leetcode)          
-$ pytest tests/test_leetcode/test_file_name.py  # replace file_name
+# Run tests on a specific file (e.g., leetcode directory)
+$ uv run pytest tests/test_leetcode/test_file_name.py  # replace file_name
 
-# Run a test on a specific function within a file (directory example: leetcode)
-$ pytest tests/test_leetcode/test_file_name.py -k "function_name" # replace file_name and function_name
+# Run a specific function within a file (e.g., leetcode directory)
+$ uv run pytest tests/test_leetcode/test_file_name.py -k "function_name"  # replace file_name and function_name
 ```
