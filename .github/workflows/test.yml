@@ -12,7 +12,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-      - run: python -m pip install --upgrade pip
-      - run: pip install -e ".[dev]"
-      - run: pytest --cov=algo_vault --cov-report=term-missing
+          cache: 'uv'
+      - run: uv sync
+      - run: uv run pytest --cov=algo_vault --cov-report=term-missing

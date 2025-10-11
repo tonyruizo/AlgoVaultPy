@@ -9,7 +9,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip'
-      - run: python -m pip install --upgrade pip
-      - run: pip install -e ".[dev]"
-      - run: mypy src/ --strict --install-types --non-interactive
+          cache: 'uv'
+      - run: uv sync
+      - run: uv run mypy src/ --strict --install-types --non-interactive
