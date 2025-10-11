@@ -1,7 +1,7 @@
 from typing import Callable
 
 
-def running_sum(nums: list[int]) -> list[int]:
+def running_sum_v1(nums: list[int]) -> list[int]:
     """
     Returns runningSum[i] = sum(nums[0..i]) for each i.
 
@@ -29,4 +29,4 @@ def running_sum_comprehension(nums: list[int]) -> list[int]:
 Implement Alternative Approach Function (for test):
 """
 
-IMPLEMENTATIONS: list[Callable[[list[int]], list[int]]] = [running_sum, running_sum_comprehension]
+IMPLEMENTATIONS: list[Callable[[list[int]], list[int]]] = [running_sum_v1, running_sum_comprehension]
