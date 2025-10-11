@@ -12,6 +12,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: 'uv'
+          cache: false
       - run: uv sync
       - run: uv run pytest --cov=algo_vault --cov-report=term-missing
